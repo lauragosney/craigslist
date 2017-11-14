@@ -2,7 +2,7 @@ class Category < ApplicationRecord
 
   has_many :listings
 
-  validates :title, presence: true, uniquesness: true
+  validates :title, presence: true
 
 
 end

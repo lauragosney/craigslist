@@ -17,13 +17,14 @@ class ListingsController < ApplicationController
     else
      render "new"
     end
+  end
 
     def form_params
     # get the data from the form
     params.require(:listing).permit(:title, :body)
+    end
 
 
-  end
 
   def show
     # individual review page
