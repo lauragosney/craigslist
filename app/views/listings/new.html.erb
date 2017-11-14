@@ -1,0 +1,9 @@
+<h3>Add your new listing</h3>
+
+<%= simple_form_for [@listing, Listing.new] do |f| %>
+
+  <%= f.input :title %>
+  <%= f.input :body %>
+  <%= f.button :submit, "Add listing" %>
+
+<% end %>

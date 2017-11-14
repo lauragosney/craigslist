@@ -1,5 +1,8 @@
-<h1>Categories list </h1>
+<h2>All categories </h2>
 
- <div class="listing">
-   <h2>Restaurant</h2>
- </div>
+<% @categories.each do |category| %>
+
+  <div class= "categories">
+    <%= link_to category.title, category_path(category) %>
+  </div>
+<% end %>
