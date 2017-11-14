@@ -2,11 +2,7 @@ class Category < ApplicationRecord
 
   has_many :listings
 
-  validates :title, presence: true
+  validates :title, presence: true, uniquesness: true
 
-  def to_param
 
-    id.to_s + "-" + title.parameterize
-
-  end
 end

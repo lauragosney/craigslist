@@ -1,8 +1,12 @@
 <h2>All categories </h2>
 
-<% @categories.each do |category| %>
+<ul><% @categories.each do |category| %>
 
-  <div class= "categories">
+  <li>
     <%= link_to category.title, category_path(category) %>
-  </div>
+  </li>
 <% end %>
+
+</ul>
+
+<p><%= link_to "Add new category", new_category_path %></p>

@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :listings
 
-  resources :categories
+  resources :categories do
+    resources :listings
+
+  end
 
   root "categories#index"
 

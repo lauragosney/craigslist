@@ -12,9 +12,12 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(form_params)
 
-    @category.save
-
-    redirect_to root_path
+    if @category.save
+     redirect_to category_path(@category)
+   else
+     render "new"
+   end
+ 
   end
 
   def show
