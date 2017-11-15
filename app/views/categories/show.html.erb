@@ -1,6 +1,10 @@
 <h1><%= @category.title %></h1>
 
+<h2>Listings</h2>
 
+<% @category.listings.each do |listing| %>
+  <p><%= listing.title %></p>
+<% end %>
 
 <h3> Add a listing </h3>
 
